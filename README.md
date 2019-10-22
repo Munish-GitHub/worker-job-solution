@@ -15,7 +15,7 @@ git clone https://github.com/Munish-GitHub/worker-job-solution.git
 The Job worker solution is build on Java 1.8 and with Spring boot framework. 
 
 Matching patterns: Java 1.8 streams are being used to find the matching jobs for a given worker.
-  patterns: IsWorkerActive (chehck if worker is active or not)
+  patterns: IsWorkerActive (check if worker is active or not)
             isValidJobDistance (Check the distance)
             doesWorkerHvCert (certificates)
             isWorkerAvailableonJobDay (check if user is working on that day equal to start day of job)
@@ -25,6 +25,7 @@ One third party utility is being used to calculate the location named DistanceCa
 
 Error handling in code:
 Below condition are handled with given codes:
+
 public static final int JOB_NOT_FOUND_CODE = 1400;
 public static final String JOB_NOT_FOUND_MESSAGE = "Job not found";
 	
