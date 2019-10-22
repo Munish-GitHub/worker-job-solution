@@ -102,7 +102,7 @@ public class JobServiceImpl implements JobService {
 	 */
 	private boolean isValidJobDistance(Job job, Worker wrks) {
 		long maxJobDistance = wrks.getJobSearchAddress().getMaxJobDistance();
-		// TODO[MA] Use string constant for "K"
+		
 		long distance = Math.round(DistanceCalculator.distance(Double.parseDouble(job.getLocation().getLatitude()),
 				Double.parseDouble(job.getLocation().getLongitude()),
 				Double.parseDouble(wrks.getJobSearchAddress().getLatitude()),
@@ -129,7 +129,7 @@ public class JobServiceImpl implements JobService {
 	 * @return
 	 */
 	private boolean isWorkerAvailableonJobDay(Job job, Worker worker) {
-		// TODO[MA] can be passed directly from outside
+		
 		int weekDay = job.getStartDate().getDayOfWeek().getValue();
 		return worker.getAvailability().stream().filter(el -> el != null).anyMatch(av -> av.getDayIndex() == weekDay);
 	}
