@@ -1,4 +1,4 @@
-package com.kd.rest.abhayas;
+package demo.abhayas;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
